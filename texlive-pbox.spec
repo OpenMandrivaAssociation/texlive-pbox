@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/pbox
+# catalog-date 2008-02-03 21:14:11 +0100
+# catalog-license gpl
+# catalog-version 1.0
 Name:		texlive-pbox
 Version:	1.0
 Release:	1
@@ -51,6 +57,7 @@ commands.
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.drv
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.dtx
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ commands.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
