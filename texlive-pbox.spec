@@ -1,16 +1,16 @@
-# revision 15878
+# revision 24664
 # category Package
 # catalog-ctan /macros/latex/contrib/pbox
-# catalog-date 2008-02-03 21:14:11 +0100
-# catalog-license gpl
-# catalog-version 1.0
+# catalog-date 2011-11-25 06:38:26 +0100
+# catalog-license gpl2
+# catalog-version 1.1
 Name:		texlive-pbox
-Version:	1.0
+Version:	1.1
 Release:	1
 Summary:	A variable-width \parbox command
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pbox
-License:	GPL
+License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbox.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbox.doc.tar.xz
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbox.source.tar.xz
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 Defines a command \pbox{<max width>}{<text>} which adjusts its
@@ -29,19 +26,19 @@ given. The package also defines some associated length
 commands.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -51,10 +48,10 @@ commands.
 %doc %{_texmfdistdir}/doc/latex/pbox/COPYING
 %doc %{_texmfdistdir}/doc/latex/pbox/ChangeLog
 %doc %{_texmfdistdir}/doc/latex/pbox/INSTALL
+%doc %{_texmfdistdir}/doc/latex/pbox/Makefile
 %doc %{_texmfdistdir}/doc/latex/pbox/README
 %doc %{_texmfdistdir}/doc/latex/pbox/pbox.pdf
 #- source
-%doc %{_texmfdistdir}/source/latex/pbox/Makefile
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.drv
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.dtx
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.ins
