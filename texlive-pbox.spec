@@ -1,11 +1,11 @@
-# revision 24664
+# revision 24807
 # category Package
 # catalog-ctan /macros/latex/contrib/pbox
-# catalog-date 2011-11-25 06:38:26 +0100
+# catalog-date 2011-12-08 01:39:40 +0100
 # catalog-license gpl2
-# catalog-version 1.1
+# catalog-version 1.2
 Name:		texlive-pbox
-Version:	1.1
+Version:	1.2
 Release:	1
 Summary:	A variable-width \parbox command
 Group:		Publishing
