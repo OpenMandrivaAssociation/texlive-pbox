@@ -25,16 +25,8 @@ width to that of the enclosed text, up to the maximum width
 given. The package also defines some associated length
 commands.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -55,7 +47,6 @@ commands.
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.drv
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.dtx
 %doc %{_texmfdistdir}/source/latex/pbox/pbox.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -66,5 +57,3 @@ commands.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
