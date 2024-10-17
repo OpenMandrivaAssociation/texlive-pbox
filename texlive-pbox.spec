@@ -3,7 +3,7 @@ Version:	24807
 Release:	2
 Summary:	A variable-width \parbox command
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pbox
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pbox
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbox.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pbox.doc.r%{version}.tar.xz
