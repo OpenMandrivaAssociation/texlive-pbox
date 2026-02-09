@@ -1,6 +1,6 @@
 Name:		texlive-pbox
-Version:	24807
-Release:	2
+Version:	77677
+Release:	1
 Summary:	A variable-width \parbox command
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pbox
